@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharanmanu-tailsample"
+version = "0.1.0"
+description = "对内容做归一化与分片比对，找出追踪的尾部采样上的重复项并按相似度归并"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "sharanmanu" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://sharanmanu.github.io"
+Repository = "https://github.com/sharanmanu/tailsample"
+Issues = "https://github.com/sharanmanu/tailsample/issues"
+
+[project.scripts]
+tailsample = "tailsample:main"
+
+[tool.setuptools]
+py-modules = ["tailsample"]
